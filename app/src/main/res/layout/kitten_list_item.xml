@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="#D1C4E9">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kittenIcon"
+        android:src="@drawable/cat"
+        android:paddingRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kitten Name"
+        android:id="@+id/nameTextView"
+        android:textSize="17sp"
+        android:textColor="#000001"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/kittenIcon"
+        android:layout_toEndOf="@+id/kittenIcon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthday: 01-21-2007"
+        android:id="@+id/birthdayTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Owner: Summer "
+        android:id="@+id/ownerTextView"
+        android:layout_below="@+id/nameTextView"
+        android:layout_alignLeft="@+id/birthdayTextView"
+        android:layout_alignStart="@+id/birthdayTextView"
+        android:paddingTop="7dp"/>
+</RelativeLayout>

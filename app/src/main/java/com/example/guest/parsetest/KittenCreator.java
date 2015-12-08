@@ -2,18 +2,19 @@ package com.example.guest.parsetest;
 
 import android.app.Application;
 
+import com.example.guest.parsetest.models.Kitten;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
 /**
  * Created by Guest on 12/3/15.
  */
-public class ParseTestApplication extends Application {
+public class KittenCreator extends Application {
     @Override public void onCreate() {
         super.onCreate();
 
         Parse.enableLocalDatastore(this);
         ParseObject.registerSubclass(Kitten.class);
-        Parse.initialize(this, "NUF3Zno2ci0DasLAVHXWP4NiFU398KRxEaPavmZ2", "NbqbPVnVm30hIX6UMWF5Xml3jNe2CoDt5l4I6DlB");
+        Parse.initialize(this, this.getString(R.string.parse_application_id), this.getString(R.string.parse_client_key));
     }
 }
