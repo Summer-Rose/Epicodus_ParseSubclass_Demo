@@ -12,9 +12,13 @@ import com.example.guest.parsetest.models.Kitten;
 
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by Guest on 12/8/15.
  */
+
 public class KittenAdapter extends RecyclerView.Adapter<KittenAdapter.KittenViewHolder> {
 
     private List<Kitten> mKittens;
@@ -44,16 +48,13 @@ public class KittenAdapter extends RecyclerView.Adapter<KittenAdapter.KittenView
 
     public class KittenViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mNameTextView;
-        public TextView mBirthdayTextView;
-        public TextView mOwnerTextView;
+        @Bind(R.id.nameTextView) TextView mNameTextView;
+        @Bind(R.id.birthdayTextView) TextView mBirthdayTextView;
+        @Bind(R.id.ownerTextView) TextView mOwnerTextView;
 
         public KittenViewHolder(View itemView) {
             super(itemView);
-
-            mNameTextView = (TextView) itemView.findViewById(R.id.nameTextView);
-            mBirthdayTextView = (TextView) itemView.findViewById(R.id.birthdayTextView);
-            mOwnerTextView = (TextView) itemView.findViewById(R.id.ownerTextView);
+            ButterKnife.bind(this, itemView);
         }
 
         public void bindKitten(Kitten kitten) {
